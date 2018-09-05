@@ -2,8 +2,10 @@ body{
     text-align: center;
     background: center no-repeat url("../image/Fond.jpg");
     color: white;
-
 }
-
+h1{
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 
