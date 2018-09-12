@@ -16,17 +16,17 @@ img{
     border-radius: 5px;
     background-color: rgb(207,232,220);
     margin-right: 10px;
-    float:left;
-    max-width: 150px;
     padding: 10px;
+    float: left;
+    width: 200px;
 }
 .box2 {
     border-radius: 5px;
     background-color: rgb(207,232,220);
     margin-left: 10px;
-    float:right;
-    max-width: 150px;
     padding: 10px;
+    float: left;
+    width: 78%;
 }
 .right {
     text-align: right;
