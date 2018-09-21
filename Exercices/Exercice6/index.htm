@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>FORMULAIRE</title>
+	<meta  charset="UTF-8">
+	<meta name="title" content="Titre de la page">
+	<meta name="description" content="description de la page">
+	<meta name="author" content="prenon NOM">
+	<meta name="keywords" content="mots-clé1, mots-clé2, ...">
+	<meta name="robots" content="index,follow">
+	<link rel="stylesheet " href ="CSS/Style.css"/>
+</head>
+<body>
+	<div class="form-style">
+	    <div class="Entete">Entrez les informations du membre</div>
+        <form>
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div><label for="Nom">Nom:</label><input id="Nom" name="Nom" type="text" placeholder="Nom" required autofocus></div>
+                <div><label for="Prénom">Prénom:</label><input id="Prénom" name="Prénom" type="text" placeholder="Prénom" required autofocus></div>
+                <div><label for="Adresse">Adresse:</label><textarea id="adresse" name="addresse" rows=4 required autofocus></textarea></div>
+                <div><label for="ville">Ville:</label><input id="ville" name="ville" type="text" placeholder="Ville" required autofocus></div>
+                <div><label for="téléphone">Téléphone:</label><input id="Téléphone" name="Téléphone" type="tel" placeholder="418-555-5555" required autofocus></div>
+                <div><label for="date d'inscription">Date d'incription:</label><input id="date d'inscription" name="date d'inscription" type="date" required autofocus></div>
+                <div><label for="date de fin">Date de fin:</label><input id="date de fin" name="date de fin" type="date" required autofocus></div>
+                <div>
+                    <label for="sexe">Sexe:
+                        <label for="Masculin">Masculin</label><input id="Masculin" name="Masculin" type="radio" value="Masculin">
+                        <label for="Féminin">Féminin</label><input id="Féminin" name="Féminin" type="radio" value="f=Féminin">
+                    </label>
+                </div>
+                <div>
+                    <label for="Carte">
+                        <select name="Carte">Choix de carte
+                            <option value="carte-1">Américain Express</option>
+                            <option value="carte-2">Master</option>
+                            <option value="carte-3">visa</option>
+                            <option value="carte-4">Banque Nationnal</option>
+                            <option value="carte-5">Desjardin</option>
+                        </select>
+                    </label>
+                </div>
+                <div><label for="Numéro de carte">Numéro de carte:</label><input id="Numéro de carte" name="Numéro de carte" type="number" placeholder="9999 9999 9999 9999" required autofocus></div>
+                <div><label for="Password">Mots de passe:</label><input id="Password" name="Password" type="Password" placeholder="Mots de passe" required autofocus></div>
+                <div><label for="email">Email:</label><input id="email" name="email" type="email" placeholder="example@domain.com" required autofocus></div>
+            </fieldset>
+            <footer>
+                <label for="submit"></label><input id="submit" name="submit" type="submit">
+                <label for="reset"></label><input id="reset" name="reset" type="reset">
+            </footer>
+        </form>
+    </div>
+</body>
+</html>
