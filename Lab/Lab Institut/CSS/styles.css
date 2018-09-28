@@ -172,6 +172,29 @@ label{
 .bouton{
 	width: 200px;
 }
+td, th, caption{
+	border: 2px solid black;
+    padding: 5px;
+}
 table{
-
+    border-collapse: collapse;
+    margin-left: 8%;
+}
+.box1{
+    border-color: #5890ff;
+}
+.box2{
+    border-color: #ff615d;
+}
+.box3{
+    border-color: #5aff78;
+}
+.box4{
+    border-color: #fe20ff;
+}
+caption{
+    border-color: #17f7ff;
+}
+table{
+    text-align: center;
 }
