@@ -16,11 +16,11 @@
       <!-- Liste déroulante -->
       <p> Sélectionnez le choix du film:
          <select 
-           id="lstOptions" size=1 name="lstOptions">
-         	<option selected >Au poste!</option>
-         	<option >Colette</option>
-         	<option >Halloween</option>
-         	<option >La religieuse</option>
+           id="lstOptions" size=1 name="lstOptions" onchange="lstOptions_onchange()">
+         	<option selected value="Au poste!" >Au poste!</option>
+         	<option value="Colette">Colette</option>
+         	<option value="Halloween">Halloween</option>
+         	<option value="La religieuse">La religieuse</option>
          </select>
       </p>
       <!-- Radio bouton -->
@@ -29,6 +29,7 @@
       <!-- Case à cocher -->
       <p>Mi-session<input id="chkMiSession" name="chkMiSession" type="checkbox"></p>
       <!-- label affichage -->
+      <img id="imgAct" name="imgAct">
       <p id="lblMessage" name="lblMessage"></p>
        <script src="JS/traitement.js"></script>
       <!-- Bouton -->
