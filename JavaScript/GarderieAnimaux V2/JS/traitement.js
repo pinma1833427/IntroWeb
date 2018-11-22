@@ -2,10 +2,13 @@ var Vet, TauxHoraire = 0, Toilet = 0, Tarif = 0, Animal, NbrHeure = 0, NbJours =
 
 function btnCalculer_onclick()
 {
- 	ChoisirVet();
- 	AnimalType();
-	CalculerRabais();
-	document.getElementById("lblMessage").innerHTML = Vet + " va s'occuper de votre " + Animal + " pour " + NbJours + " jours et avec un totale de: " + Totale + " $ ";
+    if(ValideChampsObligatoire() === true)
+    {
+        ChoisirVet();
+        AnimalType();
+        CalculerRabais();
+        document.getElementById("lblMessage").innerHTML = Vet + " va s'occuper de votre " + Animal + " pour " + NbJours + " jours et avec un totale de: " + Totale + " $ ";
+    }
 }
 function CalculerRabais()
 {
@@ -27,7 +30,7 @@ function CalculerRabais()
 }
 function AnimalType()
 {
-    if(document.getElementById("radChien").checked == true)
+    if(document.getElementById("radChien").checked === true)
     {
         Tarif = 18.50;
         Animal = "chien";
@@ -37,7 +40,7 @@ function AnimalType()
         Tarif = 16.95;
         Animal = "chat";
     }
-    if(document.getElementById("chkServ").checked == true)
+    if(document.getElementById("chkServ").checked === true)
     {
         Toilet = 5;
     }
@@ -63,7 +66,7 @@ function ChoisirVet()
 }
 function btnAfficherAnimal_onclick()
 {
-	if (document.getElementById("radChien").checked == true)
+	if (document.getElementById("radChien").checked === true)
 	{
         document.getElementById("ImgAct").src = "img/chien.png"
 	}
@@ -71,4 +74,34 @@ function btnAfficherAnimal_onclick()
 	{
         document.getElementById("ImgAct").src = "img/chat.png"
 	}
+}
+
+function ValideChampsObligatoire()
+{
+    var i, ChampRempli = true, TabId = ["txtNomClient", "txtNumTelephone", "lstVeterinaire", "txtNbreJours", "txtNbrHeure", "chkServ"];
+
+    for (i = 0; i < TabId.length; i++)
+    {
+        if (ValideExiste(TabId[i]) === false)
+        {
+            ChampRempli = false;
+        }
+    }
+    return ChampRempli;
+}
+
+function ValideExiste(NomId)
+{
+    var ContientText = true;
+
+    if(document.getElementById(NomId).value === "")
+    {
+        ContientText = false;
+        document.getElementById(NomId).style.backgroundColor = "Red";
+    }
+    else
+    {
+        document.getElementById(NomId).style.backgroundColor = "White";
+    }
+    return ContientText;
 }
